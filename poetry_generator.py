@@ -70,7 +70,8 @@ class PoetryGenerator():
             newPoem = ""
 
             while j < 5:
-                randomInt = random.randint(1, 40)
+                #randomInt = random.randint(1, 50)
+                randomInt = random.randint(1, len(obj.nGrams) - 1)
                 newPoem += obj.nGrams[randomInt] + "\n"
                 j+=1
             #print("here is new poem")
