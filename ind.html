@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Text to Speech!</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!--<button id="speak-button" onclick="sayIt()">Say hello!</button>-->
+
+
+    <button id="speak-button" onclick="sayIt('{{my_poem}}')">Say hello!</button>
+    <!--<script src="static/tts.js"></script>-->
+    <script src="{{url_for('static', filename = 'tts.js')}}"></script>
+    <p id="poem">{{line_1}}</p>
+    <p id="poem">{{line_2}}</p>
+    <p id="poem">{{line_3}}</p>
+    <p id="poem">{{line_4}}</p>
+    <p id="poem">{{line_5}}</p>
+  </body>
+</html>
