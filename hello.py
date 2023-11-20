@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 def hello_world():
     
-    poem = PoetryGenerator().call_genetic_alg()
+    poem, score = PoetryGenerator().call_genetic_alg()
     #poem = PoetryGenerator()
     #print(poem)
     ttsString = ""
@@ -26,6 +26,7 @@ def hello_world():
     return render_template(
         'index.html',
         my_poem=ttsString,
+        poem_score=score,
         line_1 = line1,
         line_2 = line2,
         line_3 = line3,

@@ -26,3 +26,13 @@ class Evaluation():
         # divide len of diff by n(of n grams) * lines in poem
 
         return len(diff)
+
+    def get_user_score(self):
+        user_score_like = input("On a scale of 0-5, how much do you like this poem?")
+
+        user_score_theme = input("On a scale of 0-5, how much does the poem align with its theme?")
+
+        return user_score_like, user_score_theme
+
+    def compute_final_score(self, novelty_score, user_score_like, user_score_theme):
+        return int(novelty_score) + int(user_score_like) + int(user_score_theme)

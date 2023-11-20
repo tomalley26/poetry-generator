@@ -26,7 +26,7 @@ class GeneticAlgorithm():
             i += 1
 
         print("HERE IS FINAL POEM \n", poemOne)
-        return poemOne
+        return poemOne, score
 
     def genetic_algorithm(self, poemOne, score1, poemTwo, score2):
 

@@ -30,20 +30,22 @@ class PoetryGenerator():
         theme = self.ask_theme()
 
         if theme == "love":
-            love_poems = [""]
-            randomInt = random.randint(1, len(love_poems) - 1)
+            love_poems = ["Pablo Nerudo.txt", "Emily Bronte.txt", "Joy Harjo.txt", \
+                "Lord Byron.txt"]
+            randomInt = random.randint(0, len(love_poems) - 1)
             poem_title = love_poems[randomInt]
 
         if theme == "nature":
             nature_poems = ["Volcanoes.txt", "Danez Smith.txt", "Pat Mora.txt" \
-                , "Linda Park.txt"]
-            randomInt = random.randint(1, len(nature_poems) - 1)
+                , "Linda Park.txt", "Sleeping in the Forest.txt"]
+            randomInt = random.randint(0, len(nature_poems) - 1)
             poem_title = nature_poems[randomInt]
 
         if theme == "culture":
             culture_poems = ["Nikki Giovanni.txt", "Teresa Pham-Carsillo.txt", \
-                "Bay Leaves.txt"]
-            randomInt = random.randint(1, len(culture_poems) - 1)
+                "Bay Leaves.txt", "Suzanne Rancourt.txt", \
+                    "Sally Wen Mao.txt"]
+            randomInt = random.randint(0, len(culture_poems) - 1)
             poem_title = culture_poems[randomInt]
 
         print("THIS IS POEM TITLE", poem_title)
@@ -121,10 +123,16 @@ class PoetryGenerator():
 
         obj3 = GeneticAlgorithm()
 
-        finalPoem = obj3.evolve(inspiring_set)
+        finalPoem, score = obj3.evolve(inspiring_set)
+
+        obj4 = Evaluation()
+
+        user_score_like, user_score_theme = obj4.get_user_score()
+        final_score = obj4.compute_final_score(score, user_score_like, user_score_theme)
 
         #print(finalPoem)
-        return finalPoem
+        print("Here's final score", final_score)
+        return finalPoem, final_score
 
 
 def main():
