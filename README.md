@@ -74,3 +74,14 @@ https://www.hindawi.com/journals/mpe/2016/4076154/
 #### Notes:
 
 This article inspired me to consider the use of genetic algorithms in my system. It also allowed me to reflect on the connections between preserving tradition and cultural background of a poem while revolutionizing the process of creating a poem. This system's main focus was to produce Tang Dynasty-style poetry. I appreciated this strong cultural foundation for the system, and used these ideas to inspire my own themes and chosen poems.
+
+### Additional Resources:
+
+https://getcssscan.com/css-buttons-examples
+
+https://thinkinfi.com/how-to-download-nltk-corpus-manually/
+
+https://www.guru99.com/wordnet-nltk.html
+
+https://www.holisticseo.digital/python-seo/nltk/wordnet
+

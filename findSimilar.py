@@ -5,6 +5,8 @@ from spacy import displacy
 nlp = spacy.load("en_core_web_sm")
 
 class FindSimilar():
+    """ Given a noun, finds synonyms and antonyms
+    """
     def __init__(self, similarWords):
         
         self.similarWords = similarWords
@@ -51,16 +53,3 @@ class FindSimilar():
                 print("chosen synonym: ", str(list(synonyms)[randomInt]))
 
                 return str(list(synonyms)[randomInt])
-
-        """
-
-        word1 = nlp(sourceWord)
-        word2 = nlp(list(synonyms)[randomInt])
-
-        print(word2)
-
-        print(word1.similarity(word2))
-
-        return str(word2)
-
-        """

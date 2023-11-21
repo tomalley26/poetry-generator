@@ -1,7 +1,6 @@
 from flask import Flask
 from flask import render_template
 from poetry_generator import PoetryGenerator
-#import poetry_generator
 
 app = Flask(__name__)
 
@@ -10,8 +9,6 @@ app = Flask(__name__)
 def hello_world():
     
     poem, score = PoetryGenerator().call_genetic_alg()
-    #poem = PoetryGenerator()
-    #print(poem)
     ttsString = ""
     line1 = poem.split('\n')[0]
     line2 = poem.split('\n')[1]
@@ -33,4 +30,3 @@ def hello_world():
         line_4 = line4,
         line_5 = line5
     )
-    #return "<p>" + poem + "<p>"

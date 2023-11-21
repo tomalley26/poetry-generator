@@ -1,10 +1,14 @@
 import random
 
 class GeneticAlgorithm():
+    """ Calls genetic algorithm for five crossovers and returns final poem
+    """
     def __init__(self) -> None:
         pass
 
     def evolve(self, inspiringSet):
+        """ Performs the five crossovers
+        """
 
         print("in evolve")
 
@@ -17,9 +21,6 @@ class GeneticAlgorithm():
 
         i = 1
 
-        #poemOne = self.genetic_algorithm(poemOne, inspiringSet.get(poemOne), \
-            #list(inspiringSet.keys())[i], inspiringSet.get(list(inspiringSet.keys())[i]))
-
         while i < len(inspiringSet):
             poemOne, score = self.genetic_algorithm(poemOne, score, \
                 list(inspiringSet.keys())[i], inspiringSet.get(list(inspiringSet.keys())[i]))
@@ -29,20 +30,21 @@ class GeneticAlgorithm():
         return poemOne, score
 
     def genetic_algorithm(self, poemOne, score1, poemTwo, score2):
+        """ Takes in two poems and their scores, splits them on a pivot point,
+        chooses which section has the higher score and appends the higher scoring
+        sections together to make a new poem. The new poem's novelty score will be
+        the highest score out of the two argument poems. Standardizes poems to
+        a length of five lines.
+        """
 
         print("here is poem 2\n")
         print(poemTwo)
-
-        #print("in GA here is 1", poemOne)
-        #print("in GA here is 2", poemTwo)
 
         # find random pivot point
         randomInt = random.randint(0, 4)
         # split both poems on that pivot point
 
         i = 0
-
-        #print("split 1", poemTwo.split('\n')[1])
 
         poemOneTop = ""
 
@@ -93,10 +95,6 @@ class GeneticAlgorithm():
         score2Top = (randomInt / 5) * score1
         score2Bottom = ((5-randomInt) / 5) * score1
 
-        # choose section from poemOne with largest novelty
-
-        # choose section from poemTwo with largest novelty score
-
         newPoem = ""
 
         # Poem 1: If top section scores higher than bottom section, 
@@ -136,7 +134,5 @@ class GeneticAlgorithm():
             shortenedPoem += actualNewPoem.split('\n')[j]
             shortenedPoem += '\n'
             j += 1
-
-        #print("HERE IS SHORTENED POEM", shortenedPoem)
 
         return shortenedPoem, max(score1, score2)
