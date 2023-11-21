@@ -2,16 +2,13 @@ import spacy
 from spacy import displacy
 from textblob import TextBlob
 nlp = spacy.load("en_core_web_sm")
-#nlp = spacy.load("/Users/tomalley/poetry-generator/.venv/lib/python3.11/site-packages/en_core_web_md")
 import random
 from nltk.corpus import wordnet
-#import syllables
 
 from createNGram import CreateNGram
 from findSimilar import FindSimilar
 from evaluation import Evaluation
 from geneticAlg import GeneticAlgorithm
-#from syllableCounter import SyllableCounter
 
 class PoetryGenerator():
     def __init__(self):

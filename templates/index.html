@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
     <title>Text to Speech!</title>
     <meta charset="utf-8">
   </head>
   <body>
-    <!--<button id="speak-button" onclick="sayIt()">Say hello!</button>-->
-
-
-    <button id="speak-button" onclick="sayIt('{{my_poem}}')">Say hello!</button>
-    <!--<script src="static/tts.js"></script>-->
+    <div class="center">
+      <button class="button-51" id="speak-button" onclick="sayIt('{{my_poem}}')">Hear this poem!</button>
+    </div>
     <script src="{{url_for('static', filename = 'tts.js')}}"></script>
     <p id="poem">{{line_1}}</p>
     <p id="poem">{{line_2}}</p>
@@ -17,8 +16,6 @@
     <p id="poem">{{line_4}}</p>
     <p id="poem">{{line_5}}</p>
 
-
-    <p id="score">Here is poem score: </p>
-    <p id="score">{{poem_score}}</p>
+    <h1 class="score-container" id="score">Poem Score: {{poem_score}}</h1>
   </body>
 </html>
