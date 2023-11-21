@@ -51,7 +51,8 @@ At the onset of this project, I was initially challenged to think of ways that I
 https://www.tandfonline.com/doi/full/10.1080/09540091.2015.1130024
 
 #### Notes:
-    I was inspired by these authors' emphasis on content theme and free-form poetry, rather than having a fixed form. They also left room for their system to produce a variety of aesthetics (some better than others), and to produce a variety of results that may be surprising.
+
+I was inspired by these authors' emphasis on content theme and free-form poetry, rather than having a fixed form. They also left room for their system to produce a variety of aesthetics (some better than others), and to produce a variety of results that may be surprising.
 
 
 'Language chunking, data sparseness, and the value of a long marker list: explorations with word n-grams and authorial attribution'
@@ -59,7 +60,8 @@ https://www.tandfonline.com/doi/full/10.1080/09540091.2015.1130024
 https://academic.oup.com/dsh/article/29/2/147/975278
 
 #### Notes:
-    This article inspired me to consider the optimal length of n-grams use to generate my poetry. After experimentation, I felt that 1-grams were not helpful in retaining the semantics of my inspiring poems, and that 3-grams could still make the semantics of generated poems confusing. I ended up settling on 4-grams, since they provided a good balance of understandable semantics and creative opportunities.
+
+This article inspired me to consider the optimal length of n-grams use to generate my poetry. After experimentation, I felt that 1-grams were not helpful in retaining the semantics of my inspiring poems, and that 3-grams could still make the semantics of generated poems confusing. I ended up settling on 4-grams, since they provided a good balance of understandable semantics and creative opportunities.
 
 'Research on Community Competition and Adaptive Genetic Algorithm for Automatic Generation of Tang Poetry'
 
@@ -67,4 +69,4 @@ https://www.hindawi.com/journals/mpe/2016/4076154/
 
 #### Notes:
 
-    This article inspired me to consider the use of genetic algorithms in my system. It also allowed me to reflect on the connections between preserving tradition and cultural background of a poem while revolutionizing the process of creating a poem. This system's main focus was to produce Tang Dynasty-style poetry. I appreciated this strong cultural foundation for the system, and used these ideas to inspire my own themes and chosen poems.
+This article inspired me to consider the use of genetic algorithms in my system. It also allowed me to reflect on the connections between preserving tradition and cultural background of a poem while revolutionizing the process of creating a poem. This system's main focus was to produce Tang Dynasty-style poetry. I appreciated this strong cultural foundation for the system, and used these ideas to inspire my own themes and chosen poems.
