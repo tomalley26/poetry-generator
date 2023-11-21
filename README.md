@@ -8,13 +8,15 @@ How to set up and run the code.
 
 1. If not using the included .venv, create your own virtual environment and download spacy, TextBlob, random, nltk.corpus, and flask.
 
-2. Running locally: cd into the project directory (make sure you're in the correct virtual environment) and run your version of ```python3 (insert local path here)/poetry-generator/poetry-generator.py```
+2. Make sure that any hardcoded paths in the code are replaced with your own local paths. For example, search "/Users/tomalley/poetry-generator/" and replace that with the new path.
+
+3. Running locally: cd into the project directory (make sure you're in the correct virtual environment) and run your version of ```python3 (insert local path here)/poetry-generator/poetry-generator.py```
 
 Respond to the prompts for theme, likability score, and theme score.
 
 You will see the poem printed in the terminal.
 
-3. Running website: cd into the project directory (make sure you're in the correct virtual environment) and run ```flask --app hello run```
+4. Running website: cd into the project directory (make sure you're in the correct virtual environment) and run ```flask --app hello run```
 
 Follow the url where the website is being temporarily hosted (e.g. http://127.0.0.1:5000)
 
@@ -38,6 +40,8 @@ The genetic algorithm repeats the above process of creating poems out of n-grams
 In order to keep the length of the poems consistent, the produced poems are then shortened to (currently 5) lines. For future work, I would explore different ways to standardize poem length without devaluing the role that the lines below each pivot point have in the genetic algorithm.
 
 Lastly, the final poem is printed to the terminal and the user is prompted for evaluation. The user will evaluate a poem based on how much they like the poem, and how relevant it is to the theme they originally chose. These scores are combined with the poem's existing novelty score to produce a final evaluative score.
+
+You can also view previously created poems and their scores in the Results.txt file.
 
 
 ### Challenges

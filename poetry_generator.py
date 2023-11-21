@@ -108,10 +108,13 @@ class PoetryGenerator():
 
         return inspiring_set
 
-    def print_to_results(self, poem):
+    def print_to_results(self, poem, score):
         with open ('/Users/tomalley/poetry-generator/Results.txt', 'a') as f:
             f.write('\n')
             f.write(poem)
+            f.write('\n')
+            f.write("Score: " + str(score))
+            f.write('\n')
         f.close()
 
     def call_genetic_alg(self):
@@ -129,6 +132,8 @@ class PoetryGenerator():
 
         #print(finalPoem)
         print("Here's final score", final_score)
+
+        self.print_to_results(finalPoem, final_score)
         return finalPoem, final_score
 
 
