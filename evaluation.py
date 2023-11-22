@@ -16,16 +16,10 @@ class Evaluation():
 
         for word in newPoem.split():
             newPoemSet.add(word)
-        
-        print("set", oldPoemSet)
-        print("set", newPoemSet)
+
+        # diff is number of new words in poem (words replaced by a synonym or antonym)
 
         diff = oldPoemSet.difference(newPoemSet)
-        print("here is diff", diff)
-
-        print("here is len of diff", len(diff))
-
-        # divide len of diff by n(of n grams) * lines in poem
 
         return len(diff)
 

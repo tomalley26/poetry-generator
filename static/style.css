@@ -1,6 +1,6 @@
 body {
     background-color: lightblue;
-  }
+}
   
 p {
     color: navy;
@@ -25,7 +25,7 @@ h1 {
     align-items: center;
     height: 110px;
     border: 3px solid navy;
-  }
+}
 
 .score-container {
     display: flex;
@@ -35,7 +35,8 @@ h1 {
     border: 3px solid navy;
 }
 
-/* CSS */
+/* Used this resource for the button: https://getcssscan.com/css-buttons-examples */
+
 .button-51 {
   background-color: transparent;
   border: 1px solid #266DB6;

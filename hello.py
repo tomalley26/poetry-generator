@@ -7,6 +7,9 @@ app = Flask(__name__)
 @app.route("/")
 
 def hello_world():
+    """ Using python and flask to call my poetry generator, get the final poem and score,
+    and display it on a webpage.
+    """
     
     poem, score = PoetryGenerator().call_genetic_alg()
     ttsString = ""

@@ -24,13 +24,8 @@ class FindSimilar():
         synonyms = set(synonyms)
         antonyms = set(antonyms)
 
-        print("Here is synonyms", synonyms)
-
-        print("Here is antonyms", antonyms)
-
-        # if random int = 1, use antonym of word. If 2, synonym
+        # if random int = 1, use antonym of word. If random int = 2, use synonym of word.
         syn_or_ant = random.randint(0,5)
-        print("here's syn or ant", syn_or_ant)
 
         if syn_or_ant == 0:
             # use antonym
@@ -38,8 +33,6 @@ class FindSimilar():
                 return sourceWord 
             else:
                 randomInt = random.randint(0, len(antonyms) - 1)
-
-                print("chosen antonym: ", str(list(antonyms)[randomInt]))
 
                 return str(list(antonyms)[randomInt])
 
@@ -49,7 +42,5 @@ class FindSimilar():
                 return sourceWord 
             else:
                 randomInt = random.randint(0, len(synonyms) - 1)
-
-                print("chosen synonym: ", str(list(synonyms)[randomInt]))
 
                 return str(list(synonyms)[randomInt])

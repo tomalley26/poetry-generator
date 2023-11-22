@@ -5,7 +5,6 @@ class CreateNGram():
     """
     def __init__(self, nGrams):
         
-        self.test = 0
         self.nGrams = nGrams
 
     def populateNGramArray(self, filename):

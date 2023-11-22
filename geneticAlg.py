@@ -10,14 +10,8 @@ class GeneticAlgorithm():
         """ Performs the five crossovers
         """
 
-        print("in evolve")
-
-        print("here is poemOne", list(inspiringSet.keys())[0])
-
-
         poemOne = list(inspiringSet.keys())[0]
         score = inspiringSet.get(poemOne)
-        print(inspiringSet.get(poemOne))
 
         i = 1
 
@@ -37,12 +31,8 @@ class GeneticAlgorithm():
         a length of five lines.
         """
 
-        print("here is poem 2\n")
-        print(poemTwo)
-
         # find random pivot point
         randomInt = random.randint(0, 4)
-        # split both poems on that pivot point
 
         i = 0
 
@@ -53,6 +43,8 @@ class GeneticAlgorithm():
         poemTwoTop = ""
 
         poemTwoBottom = ""
+
+        # split both poems on that pivot point
 
         while i < randomInt:
             poemOneTop += poemOne.split('\n')[i]
@@ -70,24 +62,8 @@ class GeneticAlgorithm():
             poemTwoBottom += '\n'
             i += 1
 
-        print("here is top and bottoms")
-
-        print("1 top \n")
-
-        print(poemOneTop)
-
-        print("1 bottom \n")
-        print(poemOneBottom)
-
-        print("2 top \n")
-
-        print(poemTwoTop)
-
-        print("2 bottom \n")
-        print(poemTwoBottom)
-
         # evaluate novelty score for each new section
-                # just do (randomInt / 5) * poem's novelty score
+                # (randomInt / 5) * poem's novelty score
 
         score1Top = (randomInt / 5) * score1
         score1Bottom = ((5-randomInt) / 5) * score1
@@ -115,24 +91,33 @@ class GeneticAlgorithm():
         else:
             newPoem += poemTwoBottom
 
-        # return newPoem and its corresponding novelty score
-
-        print("HERE IS NEW POEM", newPoem)
+        # Deleting any empty whitespaces between lines:
 
         actualNewPoem = ""
 
         for line in newPoem.split('\n'):
-            print("LINE", line)
             if len(line) != 0:
                 actualNewPoem += line
                 actualNewPoem += '\n'
 
+        # Standardizing poem to five lines
+
         shortenedPoem = ""
 
         j = 0
-        while j < 5:
-            shortenedPoem += actualNewPoem.split('\n')[j]
-            shortenedPoem += '\n'
-            j += 1
+
+        num_of_lines = 0
+
+        for line in actualNewPoem.split('\n'):
+            num_of_lines += 1
+
+        if num_of_lines > 5:
+
+            while j < 5:
+                shortenedPoem += actualNewPoem.split('\n')[j]
+                shortenedPoem += '\n'
+                j += 1
+
+        # Return new poem and its corresponding novelty score
 
         return shortenedPoem, max(score1, score2)
