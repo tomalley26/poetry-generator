@@ -31,7 +31,7 @@ class PoetryGenerator():
         theme = self.ask_theme()
 
         if theme == "love":
-            love_poems = ["Pablo Nerudo.txt", "Emily Bronte.txt", "Joy Harjo.txt", \
+            love_poems = ["Pablo Neruda.txt", "Emily Bronte.txt", "Joy Harjo.txt", \
                 "Lord Byron.txt"]
             randomInt = random.randint(0, len(love_poems) - 1)
             poem_title = love_poems[randomInt]
